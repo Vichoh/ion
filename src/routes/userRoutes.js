@@ -12,9 +12,7 @@ module.exports = function (app) {
 		console.log(req.body);
 		const userData = {
 			id: null,
-			username: req.body.username,
-			password: req.body.password,
-			email: req.body.email,
+			valor: req.body.username,
 			created_at: null,
 			updated_at: null
 		};

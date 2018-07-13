@@ -4,14 +4,14 @@ connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: '12345',
-	database: 'testapimysql'
+	database: 'iot'
 });
 
 let userModel = {};
 
 userModel.getUsers = (callback) => {
 	if (connection) {
-		connection.query('SELECT * FROM users ORDER BY id',
+		connection.query('SELECT * FROM datos ORDER BY id',
 			(err, rows) => {
 				if (err) {
 					throw err;
@@ -26,7 +26,7 @@ userModel.getUsers = (callback) => {
 userModel.insertUser = (userData, callback) => {
 	if (connection) {
 		connection.query(
-			'INSERT INTO users SET ?', userData,
+			'INSERT INTO datos SET ?', userData,
 			(err, result) => {
 				if (err) {
 					throw err;

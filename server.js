@@ -10,9 +10,7 @@ server.on('request', function(req, res) {
   console.log(req.url.split('/')[1] + '\n');
     const userData = {
       id: null,
-      username: req.url.split('/')[1] + '\n',
-      password: '123123',
-      email: '123123',
+      valor: req.url.split('/')[1] + '\n',
       created_at: null,
       updated_at: null
     };
